@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MemeGen</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="onInit()">
+
+        <div class="app-layout">
+            <div class="main-screen" onclick="toggleMenu()"></div>
+            <header>
+                <div class="header-container">
+                    <div class="header-container main-layout">
+                        <div class="logo"><img class="logo-img" src="img/LOGO.png" /></div>
+                        <div class="nav-container">
+                            <button class="a-btns" onclick="onHideEditor()">Gallery</button>
+                            <button class="a-btns" onclick="onShowSaved()">Memes</button>
+                            <button onclick="onHideEditor()" href="#about"><a href="index.html#about">About</a></button>
+                        </div>
+                        <button class="btn-menu" onclick="toggleMenu()">☰</button>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+                <div class="search-container main-layout">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search" />
+                        <button onclick="onSearch()" class="search-btn">🔍</button>
+                       
+                    </div>
+                    <div class="keywords-container"></div>
+                </div>
+
+                <div class="gallery-container">
+                    <div class="gallery-container main-layout"></div>
+                </div>
+
+                <div class="editor-container main-layout" style="display: none">
+                    <div class="canvas-container">
+                        <canvas id="my-canvas"></canvas>
+                    </div>
+                </div>
+
+                    <footer>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque repellat magnam beatae eos natus totam aut tempora deserunt voluptates, ratione nam laboriosam officiis debitis reiciendis quibusdam, maiores maxime, qui animi.</footer>
+        <script src="/controller.js"></script>
+        <script src="/services/util.js"></script>
+        <script src="/services/uplaod-service.js"></script>
+        <script src="/services/storage-service.js"></script>
+        <script src="/services/meme-service.js"></script>
+    </body>
+</html>

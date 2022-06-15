@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 100vw;
+    background-color: #e3e3e3;
+}
+
+.img {
+    width: 100%;
+}
+
+.main-layout {
+    max-width: 95vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header-container {
+    background-color: #ff7f00;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.header-container button {
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    background-color: #ff7f00;
+}
+
+.header-container .main-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.a-btns {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo-img {
+    object-fit: cover;
+    height: 3vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.nav-container > *:not(:last-child) {
+    margin-inline-end: 0.5rem;
+    height: 5vh;
+}
+
+.nav-container > *:hover,
+.nav-container > * > a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.gallery-container {
+    background-color: #e3e3e3;
+}
+
+.gallery-container .main-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(45vw, 1fr));
+    grid-auto-rows: 45vw;
+    align-items: stretch;
+    justify-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    padding: 2.5vw 0;
+    gap: 2.5vw;
+}
+
+.gallery-img,
+.meme-img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+/* CANVAS */
+
+.editor-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    max-height: 95vh;
+}
+
+.canvas-container {
+    margin-top: 10px;
+    height: 90vw;
+    width: 90vw;
+    max-height: 95vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+}
+
+.selected {
+    background-color: #ffb162;
+    transition: 0.5s;
+}
+
+canvas {
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.img {
+    width: 100%;
+}
+
+footer {
+    background-color: #ff7f00;
+    bottom: 0;
+    margin-top: 10px;
+}
