@@ -299,7 +299,7 @@ body.menu-open .main-screen {
 
 .file-input {
     width: 80px;
-    overflow: hidden;
+    overflow: hidden; /* Hides the text near the img input button
     /* display: none; */
 }
 

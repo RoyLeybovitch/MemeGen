@@ -194,6 +194,10 @@ function changeTextOnCanvas() {
     elTextInput.value = ''
 }
 
+function renderImg(img) {
+    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
+}
+
 function resizeCanvas() {
     if (!getMeme()) return
     const elCanvasContainer = document.querySelector('.canvas-container')
@@ -278,22 +282,6 @@ function getClientPos(ev) {
     return pos
 }
 
-function getOffsetPos(ev) {
-    var pos = {
-        x: ev.offsetX,
-        y: ev.offsetY,
-    }
-    if (gTouchEvs.includes(ev.type)) {
-        ev.preventDefault()
-        ev = ev.changedTouches[0]
-        pos = {
-            x: ev.pageX - ev.target.offsetLeft - ev.target.clientLeft,
-            y: ev.pageY - ev.target.offsetTop - ev.target.clientTop,
-        }
-    }
-    return pos
-}
-
 function addListeners() {
     window.addEventListener('resize', resizeCanvas)
     addMouseListeners()
@@ -328,6 +316,7 @@ function onImgInput(ev) {
     loadImageFromInput(ev, renderImg)
 }
 
+// Choose image from the computer
 function loadImageFromInput(ev, onImageReady) {
     var reader = new FileReader()
 
@@ -337,7 +326,4 @@ function loadImageFromInput(ev, onImageReady) {
         img.onload = onImageReady.bind(null, img)
     }
     reader.readAsDataURL(ev.target.files[0])
-}
-function renderImg(img) {
-    gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
 }
