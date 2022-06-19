@@ -27,7 +27,7 @@ function setGKeywords(keywords) {
     })
 }
 
-// Create
+// Creates
 
 function createGImgs(length) {
     gImgs = []

@@ -58,7 +58,7 @@ function onSaveMeme() {
     renderCanvas('isSave')
 }
 
-// Row Edit
+// Row Edit - Add / Update / Delete
 
 function onSwitchLines() {
     updateSelectedLineIdx()
