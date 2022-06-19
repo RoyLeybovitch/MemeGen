@@ -351,8 +351,8 @@ footer {
 
 .my-img {
     border-radius: 10px;
-    width: 40vw;
-    height: 30vw;
+    width: 30vw;
+    height: 20vw;
     object-fit: cover;
 }
 
